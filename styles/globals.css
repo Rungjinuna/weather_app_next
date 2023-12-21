@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+  input,
+  select {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+}
+
+@layer components {
+  .main {
+    @apply bg-main h-screen relative flex items-center bg-cover before:content-[''] before:bg-filter before:absolute before:bg-cover before:h-full before:w-full;
+  }
+  .main__box {
+    @apply flex flex-col gap-6 mx-auto min-h-[16rem] max-w-[33rem]
+     bg-box shadow py-7 border border-solid border-gray backdrop-blur-4xl
+      px-5 rounded-sm items-center z-10 text-white relative;
+  }
+  .app-logo {
+    @apply w-36;
+  }
+  .auth__form {
+    @apply flex flex-col w-3/4 gap-6;
+  }
+  .auth__input-container {
+    @apply grid gap-2 grid-cols-[25px_1fr] items-center border rounded-sm pl-2 py-2;
+  }
+  .auth__input {
+    @apply bg-transparent border-none focus:outline-none;
+  }
+  .auth__btn {
+    @apply w-full p-2 font-semibold text-black border-none rounded bg-primary;
+  }
+  .auth__mode {
+    @apply mx-auto text-sm;
+  }
+  .weather__temp {
+    @apply text-4xl;
+  }
+  .weather__bg {
+    @apply absolute right-0 w-full h-full mix-blend-soft-light;
+  }
+  .btn__secondary {
+    @apply p-2 mt-5 mr-auto text-base border rounded-sm text-primary border-primary;
+  }
+  .weather {
+    @apply relative z-10 flex flex-col items-center justify-center w-full text-center;
+  }
+}
