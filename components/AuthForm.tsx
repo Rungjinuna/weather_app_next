@@ -99,7 +99,7 @@ const AuthForm = () => {
       <InputContainer
         type='email'
         value={enteredEmail}
-        onChangeHandler={setEnteredEmail}
+        onChangedHandler={setEnteredEmail}
         placeholder='Please enter your email'
         iconsrc={emailIcon}
         iconAlt='email icon'
@@ -108,7 +108,7 @@ const AuthForm = () => {
         type='password'
         placeholder='Please enter your password'
         value={enteredPassword}
-        onChangeHandler={setEnteredPassword}
+        onChangedHandler={setEnteredPassword}
         iconsrc={lockIcon}
         iconAlt='lock icon'
       />
@@ -116,7 +116,7 @@ const AuthForm = () => {
         <InputContainer
           type='password'
           value={enteredConfirmPassword}
-          onChangeHandler={setEnteredConfirmPassword}
+          onChangedHandler={setEnteredConfirmPassword}
           placeholder='Confirm Password'
           iconsrc={lockIcon}
           iconAlt='lock icon'
